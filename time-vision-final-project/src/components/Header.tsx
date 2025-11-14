@@ -80,36 +80,32 @@ const Header: React.FC<HeaderProps> = ({ cartItems, updateCartItem, removeFromCa
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <motion.div 
-              className="flex items-center space-x-3"
+            <motion.div
+              className="flex items-center"
               whileHover={{ scale: 1.05 }}
             >
-              <motion.div 
-                className="w-12 h-12 bg-gradient-to-br from-luxury-gold to-luxury-darkGold rounded-lg flex items-center justify-center shadow-lg relative overflow-hidden"
-                animate={{ 
-                  boxShadow: [
-                    '0 0 20px rgba(212, 175, 55, 0.3)',
-                    '0 0 30px rgba(212, 175, 55, 0.6)',
-                    '0 0 20px rgba(212, 175, 55, 0.3)'
+              <motion.div
+                className="relative h-16 w-40 md:h-20 md:w-48"
+                animate={{
+                  filter: [
+                    'drop-shadow(0 0 10px rgba(212, 175, 55, 0.3))',
+                    'drop-shadow(0 0 20px rgba(212, 175, 55, 0.6))',
+                    'drop-shadow(0 0 10px rgba(212, 175, 55, 0.3))'
                   ]
                 }}
                 transition={{ duration: 3, repeat: Infinity }}
               >
-                <span className="text-white font-bold text-xl relative z-10">T&V</span>
+                <img
+                  src="/WhatsApp Image 2025-11-13 at 21.48.50_15c79407-Photoroom.png"
+                  alt="Time & Vision - DAY Logo"
+                  className="w-full h-full object-contain"
+                />
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
+                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent pointer-events-none"
                   animate={{ x: ['-100%', '100%'] }}
-                  transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+                  transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
                 />
               </motion.div>
-              <div className="hidden md:block">
-                <h1 className="text-2xl font-playfair font-bold text-white">
-                  Time & Vision
-                </h1>
-                <p className="text-sm text-luxury-gold font-medium">
-                  Montres et Lunettes
-                </p>
-              </div>
             </motion.div>
 
             {/* Navigation Desktop */}

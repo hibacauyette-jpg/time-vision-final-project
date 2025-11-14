@@ -115,15 +115,49 @@ const Hero: React.FC = () => {
 
       {/* Content */}
       <div className="relative z-20 text-center px-4 max-w-6xl mx-auto">
+        {/* 3D Brand Logo with Enhanced Animation */}
+        <motion.div
+          initial={{ opacity: 0, y: 100, scale: 0.8 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          className="mb-12 flex justify-center"
+        >
+          <motion.div
+            className="relative w-80 md:w-[500px] lg:w-[600px]"
+            animate={{
+              filter: [
+                'drop-shadow(0 0 30px rgba(212, 175, 55, 0.5))',
+                'drop-shadow(0 0 60px rgba(212, 175, 55, 0.9))',
+                'drop-shadow(0 0 30px rgba(212, 175, 55, 0.5))'
+              ],
+              rotateX: [0, 3, 0, -3, 0],
+              rotateY: [0, 2, 0, -2, 0],
+              scale: [1, 1.05, 1, 1.05, 1],
+            }}
+            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          >
+            <img
+              src="/WhatsApp Image 2025-11-13 at 21.48.50_15c79407-Photoroom.png"
+              alt="DAY - Time & Vision"
+              className="w-full h-auto"
+            />
+            <motion.div
+              className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent pointer-events-none"
+              animate={{ x: ['-100%', '100%'] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+            />
+          </motion.div>
+        </motion.div>
+
         {/* 3D Brand Name with Enhanced Animation */}
         <motion.div
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.5 }}
+          transition={{ duration: 1, delay: 0.8 }}
           className="mb-8"
         >
           <motion.h1
-            className="text-6xl md:text-8xl lg:text-9xl font-playfair font-bold text-transparent bg-clip-text bg-gradient-to-r from-luxury-gold via-white to-luxury-gold mb-4 transform-gpu"
+            className="text-5xl md:text-7xl lg:text-8xl font-playfair font-bold text-transparent bg-clip-text bg-gradient-to-r from-luxury-gold via-white to-luxury-gold mb-4 transform-gpu"
             style={{
               textShadow: '0 0 40px rgba(212, 175, 55, 0.8), 0 0 80px rgba(212, 175, 55, 0.4)',
               filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.5))',
